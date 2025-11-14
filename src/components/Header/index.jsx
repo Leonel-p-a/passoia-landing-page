@@ -5,7 +5,7 @@ import burguerIcon from '../../assets/icons/burguer-icon.png';
 import closeButton from '../../assets/icons/close.png';
 
 function Header() {
-    const [isNavbarOpen, setIsOpen] = useState(false);
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     const navRef = useRef(null);
     const burgerRef = useRef(null);
 
@@ -17,15 +17,15 @@ function Header() {
                 burgerRef.current &&
                 !burgerRef.current.contains(event.target);
 
-            if (clickedOutside) setIsOpen(false);
+            if (clickedOutside) setIsNavbarOpen(false);
         }
 
         function handleEscapeKey(event) {
-            if (event.key === 'Escape') setIsOpen(false);
+            if (event.key === 'Escape') setIsNavbarOpen(false);
         }
 
         function handleResize() {
-            if (window.innerWidth >= 768) setIsOpen(false);
+            if (window.innerWidth >= 768) setIsNavbarOpen(false);
         }
 
         document.addEventListener("click", handleClickOutside);
@@ -49,7 +49,7 @@ function Header() {
                     className='burguer-icon'
                     src={burguerIcon}
                     alt="Open menu"
-                    onClick={() => setIsOpen(prev => !prev)}
+                    onClick={() => setIsNavbarOpen(prev => !prev)}
                 />
             </header>
 
@@ -61,7 +61,7 @@ function Header() {
                     className='close-button'
                     src={closeButton}
                     alt="Close menu"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setIsNavbarOpen(false)}
                 />
 
                 <ul className='nav-link'>
@@ -74,7 +74,7 @@ function Header() {
             {isNavbarOpen && (
                 <div
                     className="overlay"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setIsNavbarOpen(false)}
                 ></div>
             )}
         </div>
