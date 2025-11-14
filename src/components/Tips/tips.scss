@@ -1,0 +1,17 @@
+@use '../../styles/base' as *;
+
+.card-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    gap: 1rem;
+    border: 1px solid;
+
+}
+
+@media (min-width: 1024px) {
+    .card-images {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

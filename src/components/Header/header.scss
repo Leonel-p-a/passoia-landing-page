@@ -1,0 +1,197 @@
+@use '../../styles/base' as *;
+
+// Mobile
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: $background-color;
+    z-index: 1000;
+}
+
+.header {
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+    height: 100px;
+
+    .logo-img {
+        width: 100px;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .burguer-icon {
+        cursor: pointer;
+    }
+}
+
+.navbar {
+    display: none;
+    gap: 2rem;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: min(70%, 320px);
+    height: 100vh;
+    max-height: 100vh;
+
+    background-color: $background-color;
+    padding: 1rem;
+    box-shadow: -.5px 0 15px #0000007d;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+
+    &.open {
+        display: flex;
+        flex-direction: column;
+        transform: translateX(0);
+    }
+
+    .close-button {
+        width: fit-content;
+        align-self: flex-end;
+        margin: 1.5rem;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            width: fit-content;
+            cursor: pointer;
+            font-size: 1.8rem;
+            padding: 0.5rem 0;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            bottom: -.5rem;
+            height: 0.2rem;
+            background-color: $border-color;
+            width: 0;
+            border-radius: 1rem;
+            transition: width 0.3s ease;
+        }
+
+        li:hover::before {
+            width: 100%;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s ease;
+    z-index: 998;
+}
+
+@keyframes underline-effect {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Larger screens
+@media (min-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        overflow: visible;
+    }
+
+    .header {
+        width: auto;
+        padding: 0;
+
+        .logo-img {
+            width: 200px;
+        }
+    }
+
+    .burguer-icon {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        width: auto;
+        height: auto;
+        max-height: none;
+        transform: none;
+        box-shadow: none;
+        padding: 0;
+        background: none;
+        overflow: visible;
+
+        .close-button {
+            display: none;
+        }
+
+        .nav-link {
+            flex-direction: row;
+            gap: 3rem;
+
+            li {
+                font-size: 1.6rem;
+                padding: 0;
+            }
+
+            li::before {
+                bottom: -0.3rem;
+            }
+        }
+    }
+
+    .overlay {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-container {
+        padding: 0 3rem;
+    }
+
+    .nav-link {
+        gap: 5rem !important;
+    }
+}

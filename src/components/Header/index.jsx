@@ -1,16 +1,83 @@
+import { useState, useRef, useEffect } from 'react';
 import './header.scss';
+import logo from '../../assets/logo/logo.png';
+import burguerIcon from '../../assets/icons/burguer-icon.png';
+import closeButton from '../../assets/icons/close.png';
 
 function Header() {
-    return (
-        <header>
-            <img src="" alt="Logo da marca da página" />
+    const [isNavbarOpen, setIsOpen] = useState(false);
+    const navRef = useRef(null);
+    const burgerRef = useRef(null);
 
-            <ul>
-                <li>LOOKS</li>
-                <li>LANÇAMENTOS</li>
-                <li>NOVIDADES</li>
-            </ul>
-        </header>
+    useEffect(() => {
+        function handleClickOutside(event) {
+            const clickedOutside =
+                navRef.current &&
+                !navRef.current.contains(event.target) &&
+                burgerRef.current &&
+                !burgerRef.current.contains(event.target);
+
+            if (clickedOutside) setIsOpen(false);
+        }
+
+        function handleEscapeKey(event) {
+            if (event.key === 'Escape') setIsOpen(false);
+        }
+
+        function handleResize() {
+            if (window.innerWidth >= 768) setIsOpen(false);
+        }
+
+        document.addEventListener("click", handleClickOutside);
+        document.addEventListener("keydown", handleEscapeKey);
+        window.addEventListener("resize", handleResize);
+        
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+            document.removeEventListener("keydown", handleEscapeKey);
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    return (
+        <div className='container header-container'>
+            <header className='content-between header'>
+                <img className='logo-img' src={logo} alt="Logo da marca da página" />
+
+                <img
+                    ref={burgerRef}
+                    className='burguer-icon'
+                    src={burguerIcon}
+                    alt="Open menu"
+                    onClick={() => setIsOpen(prev => !prev)}
+                />
+            </header>
+
+            <nav
+                ref={navRef}
+                className={`navbar ${isNavbarOpen ? 'open' : ''}`}
+            >
+                <img
+                    className='close-button'
+                    src={closeButton}
+                    alt="Close menu"
+                    onClick={() => setIsOpen(false)}
+                />
+
+                <ul className='nav-link'>
+                    <li>LOOKS</li>
+                    <li>LANÇAMENTOS</li>
+                    <li>NOVIDADES</li>
+                </ul>
+            </nav>
+
+            {isNavbarOpen && (
+                <div
+                    className="overlay"
+                    onClick={() => setIsOpen(false)}
+                ></div>
+            )}
+        </div>
     )
 }
 
