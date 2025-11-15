@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Tips from "./components/Tips";
 import Releases from "./components/Releases";
 import NewsForYou from "./components/NewsForYou";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Releases />
 
       <NewsForYou />
+
+      <Footer />
     </>
   )
 }
