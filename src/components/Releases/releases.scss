@@ -1,0 +1,108 @@
+@use '../../styles/base' as *;
+
+.releases-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0 1rem 4rem 1rem;
+        margin-top: 2rem;
+
+        border-right: 2px solid $border-color;
+        border-bottom: 2px solid $border-color;
+        border-left: 2px solid $border-color;
+
+        box-shadow: 0 2px 3px $border-color;
+
+        .stars-image {
+            width: fit-content;
+        }
+
+        span {
+            padding: 1rem 0;
+            color: #757575;
+        }
+
+        .colors {
+            display: flex;
+            gap: 1.5rem;
+
+            padding-bottom: 2rem;
+
+            img {
+                width: 40px;
+
+                border: 3px solid $border-color;
+                border-radius: 100%;
+
+                cursor: pointer;
+            }
+        }
+
+        h4 {
+            padding-bottom: 1rem;
+        }
+
+        p {
+            color: #2D2D2D;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .releases-section {
+        .content {
+            flex-direction: row;
+            gap: 2rem;
+
+            width: 80%;
+
+            padding: 4rem 1rem 4rem 1rem;
+
+
+            .lipsticks-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1.3rem;
+            }
+
+            .woman {
+                height: 418px;
+                margin: 0;
+            }
+
+            .details {
+                align-items: flex-start;
+
+                height: 418px;
+                padding: 0 3rem;
+                margin: 0;
+
+                .colors {
+                    img {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
