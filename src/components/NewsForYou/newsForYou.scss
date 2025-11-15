@@ -1,0 +1,25 @@
+@use '../../styles/base' as *;
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+
+    h2 {
+        padding-bottom: 2rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .news-container {
+        img {
+            width: 80%;
+        }
+    }
+}
