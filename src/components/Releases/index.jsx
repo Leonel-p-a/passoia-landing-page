@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import './releases.scss';
 
 import blue from '../../assets/images/azul.png'
@@ -17,7 +16,6 @@ import lipstickThree from '../../assets/images/kit_3_batom_em_bala_oceane_editio
 
 function Releases() {
     const [color, setColor] = useState(blue);
-
     const [isMobile, setIsMobile] = useState(true);
 
     const checkIsMobile = () => {
@@ -27,7 +25,6 @@ function Releases() {
 
     useEffect(() => {
         checkIsMobile();
-
         window.addEventListener('resize', checkIsMobile);
 
         return () => {

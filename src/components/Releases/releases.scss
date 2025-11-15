@@ -67,7 +67,50 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .releases-section {
+
+        .content {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+
+        .lipsticks-container {
+
+            img {
+                width: 100px;
+            }
+        }
+
+        .woman {
+            width: auto;
+        }
+
+        .details {
+            padding: 1rem;
+            height: 300px;
+
+            margin: 0;
+
+            .colors img {
+                width: 50px;
+            }
+
+            p {
+                font-size: 1.15rem;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
     
     .releases-section {
         .content {
