@@ -1,17 +1,22 @@
 @use '../../styles/base' as *;
 
-.card-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    gap: 1rem;
-    border: 1px solid;
+.tips-section {
+    // border: 1px solid;
 
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-@media (min-width: 1024px) {
-    .card-images {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 3rem 2rem;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
     }
 }

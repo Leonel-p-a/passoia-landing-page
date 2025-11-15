@@ -6,15 +6,20 @@ import tendency from '../../assets/images/Card tendencia.png';
 
 function Tips() {
     return (
-        <div className='container card-images'>
-           <img src={lips} alt="" />
+        <section className='container tips-section'>
+            <h2>LOOKS E DICAS DE MAQUIAGEM</h2>
 
-           <img src={eyes} alt="" />
-
-           <img src={face} alt="" />
-
-           <img src={tendency} alt="" />
-        </div>
+           <div className='cards'>
+               <div className='cards__top'>
+                   <img src={lips} alt="" />
+                   <img src={eyes} alt="" />
+               </div>
+               <div className='cards__bottom'>
+                   <img src={face} alt="" />
+                   <img src={tendency} alt="" />
+               </div>
+           </div>
+        </section>
     )
 }
 
