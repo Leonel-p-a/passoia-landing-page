@@ -1,4 +1,4 @@
-// import Banner from "./components/Banner";
+import Banner from "./components/Banner";
 import Header from "./components/Header";
 // import Releases from "./components/Releases";
 
@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
 
-      {/* <Banner /> */}
+      <Banner />
 
       {/* <Releases /> */}
     </>
