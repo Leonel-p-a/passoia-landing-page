@@ -14,6 +14,7 @@ function Tips() {
                    <img src={lips} alt="" />
                    <img src={eyes} alt="" />
                </div>
+               
                <div className='cards__bottom'>
                    <img src={face} alt="" />
                    <img src={tendency} alt="" />
