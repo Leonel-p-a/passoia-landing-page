@@ -1,31 +1,3 @@
-// import {
-//     banner,
-//     blue,
-//     base,
-//     brown,
-//     red,
-//     blueCircle,
-//     baseCircle,
-//     brownCircle,
-//     redCircle,
-//     stars,
-//     lipstickOne,
-//     lipstickTwo,
-//     lipstickThree,
-//     lips,
-//     eyes,
-//     face,
-//     tendency,
-//     newsBanner,
-//     mastercard,
-//     visa,
-//     pix,
-//     boleto,
-//     instagram,
-//     facebook,
-//     youtube,
-//     twitter
-// } from './images';
 import banner from './images/Banner-B4gn0jE5.png';
 import blue from './images/azul.png'
 import base from './images/base.png'
