@@ -1,16 +1,93 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Passoia Landing Page
 
-Currently, two official plugins are available:
+Landing page desenvolvida como desafio pela VaiNaWeb.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Demo ao vivo](https://passoia-landing-page.vercel.app/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Índice
 
-## Expanding the ESLint configuration
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura de Pastas](#estrutura-de-pastas)
+- [Rodando Localmente](#como-executar-localmente)
+- [Funcionalidades](#funcionalidades)
+- [Contribuidores](#contribuidores)
+- [Licença](#licença)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Sobre o Projeto
+
+A Passoia Landing Page é uma página única criada como parte de um desafio da VaiNaWeb. O objetivo é demonstrar habilidades de frontend e boas práticas modernas de desenvolvimento, com uma estrutura construída sobre Vite para facilitar o desenvolvimento e a construção para produção.
+
+Ela é responsiva, leve e foi pensada para servir como uma página de apresentação ou marketing — ideal para produtos, serviços ou demonstrações.
+
+
+## Tecnologias Utilizadas
+
+- React.js - Biblioteca JavaScript para construção da interface
+- Vite - Configuração do Vite para otimizar o bundle final, melhor performance e build leve.
+- SCSS - Uso de SCSS para escrever CSS modular e reutilizável.
+## Estrutura de Pastas
+
+```
+passoia/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── styles/
+│   ├── App.jsx
+|   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
+```
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://github.com/Leonel-p-a/passoia-landing-page.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd passoia-landing-page
+```
+
+Certifique-se de ter o Node.js (versão 20.19+, 22.12+) instalado, depois rode:
+
+```bash
+  npm install
+```
+
+Inicie o servidor de desenvolvimento
+
+```bash
+  npm run dev
+```
+
+Abra seu navegador e vá para http://localhost:5173.
+
+
+## Funcionalidades
+
+Aqui estão algumas das principais funcionalidades e características da landing page:
+
+- Design responsivo: otimizado para desktop, tablet e mobile.
+- Menu de navegação fixo ou hamburguer (dependendo do tamanho de tela).
+## Contribuidores
+
+- **Leonel P-A** – Autor original do projeto.  
+- Contribuições são bem‑vindas! Se você quiser colaborar (melhorias visuais, adição de funcionalidades, correção de bugs), por favor abra um *pull request*.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).

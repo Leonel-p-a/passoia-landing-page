@@ -1,8 +1,5 @@
 import './tips.scss';
-import lips from '../../assets/images/Card labios.png';
-import eyes from '../../assets/images/Card olhos.png';
-import face from '../../assets/images/Card rosto.png';
-import tendency from '../../assets/images/Card tendencia.png';
+import { lips, eyes, face, tendency } from '../../assets/images';
 
 function Tips() {
     return (

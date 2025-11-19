@@ -1,6 +1,5 @@
 import './newsForYou.scss';
-
-import newsBanner from '../../assets/images/makeBanner-DybWCcfF.png'
+import { newsBanner } from '../../assets/images';
 
 function NewsForYou() {
     return (

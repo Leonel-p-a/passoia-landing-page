@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 import './releases.scss';
-
-import blue from '../../assets/images/azul.png'
-import base from '../../assets/images/base.png'
-import brown from '../../assets/images/marrom.png'
-import red from '../../assets/images/vermelho.png'
-import blueCircle from '../../assets/images/Ellipse azul.png';
-import baseCircle from '../../assets/images/Ellipse base.png';
-import brownCircle from '../../assets/images/Ellipse marrom.png';
-import redCircle from '../../assets/images/Ellipse vermelho.png';
-import stars from '../../assets/images/five-stars-rating-icon-png 2.png'
-import lipstickOne from '../../assets/images/image-5f98509bd4794faf9bb619ce30ac88f7 1.png';
-import lipstickTwo from '../../assets/images/kit_batom_liquido_vermelho_batom_liquido_nude_batom_liquido_rosa_oceane_edition_1 1.png';
-import lipstickThree from '../../assets/images/kit_3_batom_em_bala_oceane_edition_1 1.png';
+import {
+    blue,
+    base,
+    brown,
+    red,
+    blueCircle,
+    baseCircle,
+    brownCircle,
+    redCircle,
+    stars,
+    lipstickOne,
+    lipstickTwo,
+    lipstickThree
+} from '../../assets/images'
 
 function Releases() {
     const [color, setColor] = useState(blue);

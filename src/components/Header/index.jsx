@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import './header.scss';
 import logo from '../../assets/logo/logo.png';
-import burguerIcon from '../../assets/icons/burguer-icon.png';
-import closeButton from '../../assets/icons/close.png';
+
+import { burguerIcon, closeButton } from '../../assets/icons';
 
 function Header() {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
