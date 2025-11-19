@@ -5,6 +5,12 @@ Landing page desenvolvida como desafio pela VaiNaWeb.
 
 [Demo ao vivo](https://passoia-landing-page.vercel.app/)
 
+<br/>
+
+![showcase](./public/cover.png)
+
+<br/>
+
 
 ## Índice
 
