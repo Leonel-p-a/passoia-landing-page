@@ -3,7 +3,7 @@
 
 Landing page desenvolvida como desafio pela VaiNaWeb.
 
-[Demo ao vivo](https://passoia-landing-page.vercel.app/)
+<a href="https://passoia-landing-page.vercel.app/" target="_blank">Demo ao vivo</a>
 
 
 ## Índice
