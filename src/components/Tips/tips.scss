@@ -22,6 +22,15 @@
 
         width: 100%;
 
+        img {
+            cursor: pointer;
+            transition: 300ms;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
         &__top {
             display: flex;
             flex-direction: row;
